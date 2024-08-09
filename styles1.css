@@ -1,0 +1,152 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, rgba(24, 28, 41, 0.8), rgba(76, 175, 80, 0.8)), url('your-background-image.jpg') no-repeat center center;
+    background-size: cover;
+    animation: zoomInOut 30s infinite alternate;
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1.5s;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #f5f5f5;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #f5f5f5;
+    color: #f5f5f5;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-field label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #f5f5f5;
+    font-size: 16px;
+}
+
+.input-field input:focus + label,
+.input-field input:valid + label {
+    top: -20px;
+    font-size: 12px;
+    color: #4caf50; /* Accent color */
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: #f5f5f5;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons button {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #4caf50; /* Primary button color */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+    background: #388e3c; /* Hover effect color */
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login .social-btn {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.social-login .google {
+    background: #db4437; /* Google color */
+}
+
+.social-login .facebook {
+    background: #3b5998; /* Facebook color */
+}
+
+.social-login .google:hover {
+    background: #c1351d;
+}
+
+.social-login .facebook:hover {
+    background: #2d4373;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomInOut {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 110%;
+    }
+}
